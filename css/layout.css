@@ -1,8 +1,41 @@
-#hd h1 a {
-  display: block;
+@charset "UTF-8";
+#hd {
+  font-family: "Noto Sans KR";
+  font-weight: 400;
+  font-size: 16px;
+  border-bottom: 1px solid #ccc;
 }
 
-#hd h1 a img {
-  height: 35px;
+#gnb li a {
+  color: #666;
 }
-/*# sourceMappingURL=layout.css.map */
+
+#gnb > li > a {
+  font-size: 2em;
+  font-weight: 900;
+  padding: 1em;
+}
+
+#gnb > li:hover > a {
+  color: #f8ba00;
+}
+
+#gnb > li:hover ul {
+  height: 150px;
+}
+
+#gnb > li ul {
+  border: 1px solid #ccc;
+  left: 0;
+  right: 0;
+  top: 100%;
+  min-width: 110px;
+  padding: 0 1em;
+  border-top-width: 0;
+  background-color: white;
+  /*중요*/
+  height: 0;
+  overflow: hidden;
+  -webkit-transition: height 0.5s;
+  transition: height 0.5s;
+}

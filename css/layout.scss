@@ -1,31 +1,62 @@
-$color : #A09090;
-$hdHeight : 35px;
+$fontColor : #666;
+$activeColor : #f8ba00;
+$fontFamily : 'Noto Sans KR';
+$fontEm : 'Noto Serif KR';
+$font100 : 100;
+$font400 : 400;
+$font500 : 500;
+$font900 : 900;
+$fontSize : 16px;
+
 
 #hd{
+    font-family: $fontFamily;
+    font-weight: $font400;
+    font-size: $fontSize;
+    border-bottom:1px solid #ccc;
     h1{
         a{
-           
             img{
-               
+
             }
         }
     }
+    
 }
 #gnb{
     li{
         a{
-           
-           
+            color:$fontColor;            
+        }        
+    }
+    >li{
+        >a{
+            font-size: 2em;
+            font-weight: $font900;
+            padding: 1em;            
         }
+        &:hover > a{
+            color : $activeColor;        
+        }
+        &:hover ul{
+            height:150px;
+        }   
         ul{
-          display: none;  
+            border:1px solid #ccc;
+            left:0; right:0;  top:100%;
+            min-width: 110px;
+            padding:0 1em; 
+            border-top-width:0;
+            background-color: white;  
+            /*중요*/          
+            height:0;
+            overflow: hidden;
+            transition: height 0.5s;
             li{
-                a{}
+                a{
+
+                }
             }
         }
-        
-        
     }
-    
-   
 }
